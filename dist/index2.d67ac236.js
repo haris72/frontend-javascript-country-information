@@ -550,7 +550,7 @@ async function fetchCountry(nameCountry) {
         userWarning.textContent = '';
     } catch (e) {
         //Zorg ervoor dat als er naar een land wordt gezocht dat niet bestaat, er een foutmelding wordt getoond. Tip: als er een ongeldige API call wordt gemaakt, zal de response in het catch blok terecht komen.
-        userWarning.textContent = 'Het ingetypte land is niet correct';
+        userWarning.textContent = 'Het ingetypte land is niet correct, probeer weer';
         console.log(e);
     }
 }
@@ -577,7 +577,7 @@ function results(output3) {
     function currencies(input) {
         for(let i = 0; i < input.currencies.length; i++){
             if (i === 0) currencys = input.currencies[0].name + "'s.";
-            else if (i >= 0) currencys = currencys + " and " + input.currencies[i].name + "'s.";
+            else if (i >= 0) currencys = currencys.substring(0, currencys.length - 1) + " and " + input.currencies[i].name + "'s.";
         }
         return currencys;
     }

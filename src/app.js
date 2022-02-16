@@ -21,6 +21,7 @@ async function fetchCountrys() {
         let output = await axios.get('https://restcountries.com/v2/all');
 
         results(output);
+
     }
 
     catch (e)
@@ -34,12 +35,13 @@ async function fetchCountrys() {
 fetchCountrys();
 
 function results (output) {
-
+    console.log(output.data);
         const results1 = output.data.sort ((a,b) => a.population - b.population));
 
         const results2 = results1.map((result) => {
 
             let {  name, region } = result;
+
 
             const countrysList = document.getElementById('country-list');
             const countryItem = document.createElement('li');

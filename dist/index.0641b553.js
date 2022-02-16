@@ -545,6 +545,7 @@ async function fetchCountrys() {
 }
 fetchCountrys();
 function results(output) {
+    console.log(output.data);
     const results1 = output.data.sort((a, b)=>a.population - b.population
     );
     const results2 = results1.map((result)=>{
