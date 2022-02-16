@@ -99,8 +99,8 @@ function results (output3) {
 
             else if (i >= 2) {
                 languagys +=  " and " + input.languages[i].name;
-                languagys = languagys.replace("and", ",");
-                languagys = languagys.replace(" , ", ", ");
+                languagys = languagys.replace(" and", ",");
+                //languagys = languagys.replace(" , ", ", ");
             }
 
         }
