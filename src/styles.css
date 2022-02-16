@@ -37,17 +37,19 @@ h1{
 }
 
 .blauw,.groen, .rood, .geel, .paars, .overig {
-    font-size: 15px;
+    font-size: 13px;
     font-family: Arial, sans-serif;
-    margin-top: -2px;
 }
 
 img {
     width: 8%;
     height: 8%;
     float:left;
-    margin-right: 25px;
-    padding-bottom: 10px;
+    margin-right: 8px;
+    position: relative;
+    top:10px;
+
+
 }
 
 #world_img {
@@ -57,7 +59,7 @@ img {
 
 li {
     list-style-type: none;
-    flex-basis: 80px;
+    flex-basis: 90px;
     flex-grow: 0;
     flex-shrink: 1;
     display: inline-block;
@@ -66,23 +68,28 @@ li {
 
 ul {
     background-color: lightgray;
-    margin: 100px;
+    margin: 80px;
     border-width: 1px;
     column-count: 3;
     padding: 35px;
 }
 
 li > h3{
-    margin-top: -10px;
+
     font-family: Calibri, sans-serif;
-    font-size: 15px;
-    float: left;
+    font-size: 13px;
+    position: relative;
+    top:-8px;
+    right:2px;
+
 }
 
 
 button {
    text-align: center;
     width: 200px;
+    position: relative;
+    top:15px;
 }
 
 a, a:visited, a:hover{
