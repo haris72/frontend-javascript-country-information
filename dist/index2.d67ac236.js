@@ -582,6 +582,21 @@ function results(output3) {
         return currencys;
     }
     currencies(output3);
+    //bonus opdracht
+    let languagys;
+    function languages(input) {
+        for(let i = 0; i < input.languages.length; i++){
+            if (i === 0) languagys = input.languages[0].name;
+            else if (i >= 0 && i < 2) languagys = languagys + " and " + input.languages[i].name;
+            else if (i >= 2) {
+                languagys += " and " + input.languages[i].name;
+                languagys = languagys.replace("and", ",");
+                languagys = languagys.replace(" , ", ", ");
+            }
+        }
+        return languagys;
+    }
+    languages(output3);
     const countryItem2 = document.getElementById('country-items');
     let country2 = `
         <li>
@@ -590,6 +605,7 @@ function results(output3) {
             <div>${output3.name} is situated in ${output3.subregion}. 
             It has a population of ${output3.population} people.</br>
             The capital is ${output3.capital} and you can pay with ${currencys}
+            They speak ${languagys}.
             </div>
         </li>
 `;
